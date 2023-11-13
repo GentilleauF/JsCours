@@ -6,7 +6,19 @@
     <title>Formulaire</title>
 </head>
 <body>
-
+    <div class="moyenne-content">
+        <h1>Calculer ma moyenne</h1>
+        <div class="ajout-note-content">
+            <label for="notes">Saisir vos notes une à une :</label>
+            <input type="text" id="notes-input" name="note">
+            <input type="submit" class="btn" id="bt" value="Ajouter">
+            <input type="submit" class="btn" id="bt-supprimer" value="Supprimer" >
+        </div>
+        <p id="affichage-notes">Mes notes :</p>
+    
+        <input type="submit" class="btn" id="bt-calcul" value="Calculer ma moyenne">
+        <p id="ma-moyenne">Ma moyenne est de :</p>
+    </div>
 
     <script src="./script.js"></script>
 </body>

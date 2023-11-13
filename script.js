@@ -1,16 +1,52 @@
-let nombre = prompt("Saisir le nombre de notes");
-let notes = [] 
-for (let i = 0; i < nombre; i++) {
-   let note = parseInt(prompt("saisir une note "));
-   notes.push(note);
+let noteInput = document.getElementById("notes-input");
+afficherNotes = document.getElementById("affichage-notes");
+afficherMoyenne = document.getElementById("ma-moyenne");
+let notes = [] ;
+
+//Actions
+document.getElementById("bt").addEventListener("click", ajouterNote);
+document.getElementById("bt-calcul").addEventListener("click", calculMoyenne);
+document.getElementById("bt-supprimer").addEventListener('click', supprimerNotes)
+
+
+
+// ===== AJOUTER UNE NOTE ===== //
+function ajouterNote(e) {
+    e.preventDefault();
+    sommesNotes = 0;
+
+    notes.push(parseFloat(noteInput.value))  
+    console.log(notes); 
+    
+    for (let i=0; i<notes.length; i++) {
+        afficherNotes.textContent = "Mes notes : " + notes
+    }
 }
-// calculer la moyenne de notes et l'afficher dans la console 
-let sommesNotes = 0
 
-for (let y=0; y<notes.length; y++) {
-    sommesNotes += notes[y];
+// ===== SUPPRIMER UNE NOTE ===== //
+function supprimerNotes() {
+    notes = [];
+    afficherNotes.textContent = notes
+    afficherMoyenne.textContent = "Entrer vos notes pour calculer votre moyenne"
 }
 
-let moyenne =  sommesNotes/notes.length;
+// ===== CALCULER LA MOYENNE ===== //
+function calculMoyenne () {
+    for (let y=0; y<notes.length; y++) {
+        sommesNotes += notes[y];
+    }
 
-console.log(moyenne);
+    let moyenne =  sommesNotes/notes.length;
+    if (moyenne % 1 != 0) {
+       afficherMoyenne.textContent ="Ma moyenne est de: " + moyenne.toFixed(2) 
+    } else {
+        afficherMoyenne.textContent ="Ma moyenne est de: " + moyenne
+    }
+   ;
+}
+
+
+
+
+
+

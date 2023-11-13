@@ -1,0 +1,30 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background: rgb(231, 231, 231);
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.moyenne-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+#bt-calcul {
+    width: 350px;
+}
+
+.btn {
+    background: rgb(7, 36, 66);
+    cursor: pointer;
+    color: white;
+    border: none;
+    padding: 12px 30px 12px 30px;
+    border-radius: 10px;
+}

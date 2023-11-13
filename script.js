@@ -1,24 +1,16 @@
-let myName = document.getElementById("name");
-let myFirstname = document.getElementById("firstname");
-let myEmail = document.getElementById("email");
+let nombre = prompt("Saisir le nombre de notes");
+let notes = [] 
+for (let i = 0; i < nombre; i++) {
+   let note = parseInt(prompt("saisir une note "));
+   notes.push(note);
+}
+// calculer la moyenne de notes et l'afficher dans la console 
+let sommesNotes = 0
 
-// Fonction pour ne pas raffraichir la page au submit 
-document.getElementById("form").onsubmit = (event) => {
-    event.preventDefault();
+for (let y=0; y<notes.length; y++) {
+    sommesNotes += notes[y];
 }
 
-let myArray = []
-document.getElementById("bt").addEventListener("click", submit)
+let moyenne =  sommesNotes/notes.length;
 
-
-function submit() {
-    myArray.push({
-        nom: myName.value,
-        prenom: myFirstname.value,
-        email: myEmail.value
-    });
-
-    console.log(myArray); 
-}
-
-
+console.log(moyenne);

@@ -1,16 +1,24 @@
+let myName = document.getElementById("name");
+let myFirstname = document.getElementById("firstname");
+let myEmail = document.getElementById("email");
+
+// Fonction pour ne pas raffraichir la page au submit 
+document.getElementById("form").onsubmit = (event) => {
+    event.preventDefault();
+}
+
 let myArray = []
 document.getElementById("bt").addEventListener("click", submit)
 
 
 function submit() {
-    let myName = document.getElementById("name").value;
-    let myFirstname = document.getElementById("firstname").value;
-    let myEmail = document.getElementById("email").value;
+    myArray.push({
+        nom: myName.value,
+        prenom: myFirstname.value,
+        email: myEmail.value
+    });
 
-    myArray.push(myName);
-    myArray.push(myFirstname);
-    myArray.push(myEmail); 
-console.log(myArray); 
+    console.log(myArray); 
 }
 
 

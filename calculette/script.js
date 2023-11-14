@@ -1,4 +1,5 @@
 let calculBtn = document.querySelectorAll(".calcul-btn");
+let screen = document.getElementById("screen")
 
 calculBtn.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -9,5 +10,4 @@ calculBtn.forEach(btn => {
 
 function afficherCalcul (value) {
     document.getElementById("screen").value += value;
-
 }

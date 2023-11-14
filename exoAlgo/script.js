@@ -3,9 +3,11 @@ let mot1 = prompt("Saisir le mot 1");
 let mot2 = prompt("Saisir le mot 2");
 let mot3 =prompt("Saisir le mot 3");
 
+
+// Methode 1
 if (mot1.localeCompare(mot2) <= -1 && mot2.localeCompare(mot3) <= -1 ) {
         console.log("Les mots sonts dans le bon ordre alphabétique");
-     } else {console.log("pas dans l'ordre alphabétiquea");}
+     } else {console.log("pas dans l'ordre alphabétique");}
 
 
 

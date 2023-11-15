@@ -1,13 +1,10 @@
-let mixedDataTypes = [1,"salut",true,4,5,"hey"];
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+let calcul = 0;
 
-let itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM"]
+for (let i=0; i<ages.length; i++) {
+    calcul += ages[i];
+}
 
+let moyenne = calcul / ages.length
 
-console.log(itCompanies.shift());
-
-
-
-
-
-
-
+console.log(moyenne);

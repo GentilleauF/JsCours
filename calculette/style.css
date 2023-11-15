@@ -1,8 +1,47 @@
 * {
-    font-size: 1.1rem;
+  font-size: 1.5rem;     
 }
 
-.screen {
-    border: 1px solid;
+.calculette {
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(95, 119, 185);
+    width: 350px;
+    height: 600px;
+}
+
+.calculette-screen {
+    background: rgb(110, 168, 197);
+    text-align: right;
+    padding: 5px;
     width: 300px;
+    min-height: 40px;
+}
+
+.button-div {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button-btn {
+    background: rgb(84, 109, 177);
+    cursor: pointer;
+    padding: 10px;
+    margin: 7px 20px 7px 20px;
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.nbr {
+    flex: 2;
 }

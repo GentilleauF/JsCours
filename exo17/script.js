@@ -41,8 +41,8 @@ class CompteBancaire {
     if(montant> this.solde){
       console.log("Virement impossible, fonds insuffisants");
     } else {
-      this.solde -= montant;
-      beneficiaire.solde += montant;
+      this.retrait(montant);
+      beneficiaire.credit(montant)
       console.log("Votre virement de "+ montant + '€ a été viré à ' + beneficiaire.nom);
     }
   }
@@ -50,20 +50,16 @@ class CompteBancaire {
 }
 
 
-
+//INIT
 let usersAccount = {
   Alex :  new CompteBancaire("Alex", 1000),
   Clovis : new CompteBancaire("Clovis", 1000),
   Marco : new CompteBancaire("Marco", 1000)
 };
+let crediterBtn = document.getElementById("crediter")
+let debiterBtn = document.getElementById("debiter")
+let virementBtn = document.getElementById("virement")
 
-let selectUsers = document.querySelectorAll("#userId");
-selectUsers.addEventListener("click", function() {
-  
-})
-
-usersAccount["Marco"].virement(200, usersAccount["Alex"]);
-usersAccount["Marco"].retrait(200);
 
 
 //Ajout des users
@@ -77,13 +73,33 @@ window.addEventListener("load", function() {
           const userDiv = document.createElement("div");
           userDiv.textContent = userName;
           userDiv.setAttribute("id", "userId")
+
+          userDiv.addEventListener("click", function() {
+
+            userDiv.classList.toggle("selected")
+          })
           container.appendChild(userDiv);
       }
   }
 });
 
+crediterBtn.addEventListener("click", function crediter() {
+  userSelected = document.getElementsByClassName("selected")
+  console.log(userSelected);
+});
 
-//Selection d'une personne
+debiterBtn.addEventListener("click", function debiter() {
+  console.log("ok");
+});
+
+virementBtn.addEventListener("click", function virement() {
+  console.log("ok");
+});
 
 
+
+
+
+usersAccount["Marco"].virement(300, usersAccount["Alex"]);
+usersAccount["Marco"].retrait(200);
 

@@ -20,8 +20,4 @@ function calculer() {
   let calcul = (prixHt* 1.2 * quantity).toFixed(2);
 
   resultScreen.innerText = "Le pris TTC est de " + calcul + "€ "
-
-
-
-
 }

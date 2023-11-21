@@ -34,8 +34,6 @@ let seConnecter = document.getElementById('bt');
 
 //Verif du mail
 emailInput.addEventListener("keyup", function() {
-  let regexEmail =/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 
   if(regexEmail.test(emailInput.value) == true) {
     emailInput.style.background = ("green");
@@ -53,6 +51,7 @@ passwordInput.addEventListener("blur", function() {
   }
 });
 
+//
 seConnecter.addEventListener("click", function(){
   const emailValid = regexEmail.test(emailInput.value);
   const passwordValid = regexPassword.test(passwordInput.value);

@@ -1,0 +1,21 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="./script.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body onload="showAllTask()">
+    <h1>Liste des tâches</h1>
+    <input type="text" id="task">
+    <button id="add", onclick="addTask()">Ajouter</button>
+    <button id="delAllTask", onclick="dellAllTask()">Tout Supprimer</button>
+    <button id="reload", onclick="reload()">Recharger la page</button>
+    <div id="tasks"></div>
+
+    <p id="resultat"></p>
+</body>
+
+</html>
+
